@@ -1,0 +1,38 @@
+<!--区域1：日期选择器-->
+<view class="Love">
+  <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+    <view class="tui-picker-detail">
+      相恋日: {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+    </view>
+  </picker>
+</view>
+
+<!--区域2：情话部分-->
+  <view class="LoveWords">
+    <!--区域2.1：地区选择器-->
+    <picker mode="region" bindchange="regionChang">
+      <view>我在：
+        <text class="region">{{region}}</text>
+      </view>
+    </picker>
+  <!--区域2.2：天气信息-->
+  天气：
+    <text class="weather">{{weather_now.text}}</text>
+    <view class="temperature">温度：
+      <text class="temperature1">{{weather_now.temp}}℃</text>
+    </view>
+<!--区域2.3：相恋时间-->
+    <view class="day">此时是我们相恋的第
+      <text class="day_count">{{period[0]}}</text>天
+      <text class="hour_count">{{period[1]}}</text>时
+      <text class="minute_count">{{period[2]}}</text>分
+      <text class="second_count">{{period[3]}}</text>秒
+    </view>
+</view>
+
+<!--区域2.4：情话-->
+<text class="say">我想对你说</text>
+<view class="mycaihongpi">喜欢看你认真的样子，喜欢听你的声音，忍不住想要拥有你的微笑~</view>
+<view class="caihongpi">{{caihongpi[0].content}}</view>
+
+
